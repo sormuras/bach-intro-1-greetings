@@ -16,4 +16,4 @@ jobs:
       with:
         java-version: 11
     - name: 'Build with Bach.java'
-      run: jshell https://sormuras.de/bach@11.3-M1/build
+      run: jshell https://sormuras.de/bach@11.4/build
