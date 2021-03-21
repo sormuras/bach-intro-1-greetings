@@ -2,9 +2,9 @@ name: Java CI with Bach.java
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -14,6 +14,8 @@ jobs:
     - name: 'Set up JDK'
       uses: actions/setup-java@v1
       with:
-        java-version: 11
-    - name: 'Build with Bach.java'
-      run: jshell https://sormuras.de/bach@11.8/build
+        java-version: 16
+    - name: 'Build with Bach'
+      run: |
+        PATH=$PATH:.bach/bin
+        bach --project-name greetings --project-version 1 build
