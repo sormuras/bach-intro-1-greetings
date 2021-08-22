@@ -14,8 +14,8 @@ jobs:
     - name: 'Set up JDK'
       uses: actions/setup-java@v1
       with:
-        java-version: 16
+        java-version: 17
     - name: 'Build with Bach'
       run: |
         PATH=$PATH:.bach/bin
-        bach --project-name greetings --project-version 1 build
+        bach build --project-name greetings --project-version 1
