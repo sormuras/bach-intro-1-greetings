@@ -12,17 +12,10 @@ jobs:
     steps:
       - name: 'Check out repository'
         uses: actions/checkout@v2
-      - name: 'Download JDK'
-        uses: sormuras/download-jdk@v1
-        with:
-          feature: 17
       - name: 'Set up JDK'
         uses: actions/setup-java@v2
         with:
-          java-version: ${{ env.JDK_VERSION }}
-          distribution: jdkfile
-          jdkFile: ${{ env.JDK_FILE }}
+          java-version: 17
+          distribution: temurin
       - name: 'Build with Bach'
-        run: |
-          PATH=$PATH:.bach/bin
-          bach build --project-name greetings --project-version 1
+        run: java .bach/src/Bach.java --project-name greetings --project-version 1 build
