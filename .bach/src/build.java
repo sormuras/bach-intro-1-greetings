@@ -10,7 +10,7 @@ class build {
 
     if (project.spaces().main().launcher().isPresent()) {
       bach.run("banner", "Launching main module");
-      bach.run("launch", 1, 2, 3);
+      bach.run("launch");
     }
   }
 }
