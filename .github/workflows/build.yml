@@ -18,7 +18,7 @@ jobs:
           release: 17
       - name: 'Build with Bach'
         run: |
-          sh .bach/bin/bach \
+          bash .bach/bin/bach \
             --project-name greetings \
             --project-version 1 \
             build
