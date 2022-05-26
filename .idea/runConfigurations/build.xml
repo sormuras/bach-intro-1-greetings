@@ -1,7 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="build" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="build" />
+  <configuration default="false" name="build" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.github.sormuras.bach.Main" />
     <module name="Greetings" />
+    <option name="PROGRAM_PARAMETERS" value="build" />
+    <option name="VM_PARAMETERS" value="--module-path .bach/bin --add-modules com.github.sormuras.bach" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

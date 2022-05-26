@@ -13,9 +13,12 @@ jobs:
       - name: 'Check out repository'
         uses: actions/checkout@v2
       - name: 'Set up JDK'
-        uses: actions/setup-java@v2
+        uses: oracle-actions/setup-java@v1
         with:
           java-version: 17
-          distribution: temurin
       - name: 'Build with Bach'
-        run: java .bach/src/Bach.java --project-name greetings --project-version 1 build
+        run: |
+          sh .bach/bin/bach \
+            --project-name greetings \
+            --project-version 1 \
+            build

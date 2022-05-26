@@ -7,7 +7,7 @@
 ## Console
 
 - Open a terminal with [JDK 17](https://jdk.java.net) (or later) installed
-- Run `java .bach/src/Bach.java build`
+- Run either `sh .bach/bin/bach build` Linux/Mac or `.bach\bin\bach build` on Windows.
 
 ## IDEA
 
